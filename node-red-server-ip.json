@@ -1,0 +1,53 @@
+[
+    {
+        "id": "5a67a6df.793838",
+        "type": "inject",
+        "z": "cf884759.20c828",
+        "name": "Init request",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "49653f88.d571a"
+            ]
+        ]
+    },
+    {
+        "id": "d70db4a2.ff4c98",
+        "type": "debug",
+        "z": "cf884759.20c828",
+        "name": "Debug result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 510,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "49653f88.d571a",
+        "type": "http request",
+        "z": "cf884759.20c828",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://whatismyip.akamai.com/",
+        "tls": "",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "d70db4a2.ff4c98"
+            ]
+        ]
+    }
+]
